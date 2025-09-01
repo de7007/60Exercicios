@@ -43,6 +43,69 @@ namespace Exercicios
             return num / 2;
         }// fim do metodo
 
+        //3.Converta um valor de dólares para reais com uma taxa fixa
+        public double ConverterDolarReal(double valorDolar, double cotacao)
+        {
+            if(valorDolar <= 0 || cotacao <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return valorDolar * cotacao;
+            }
+        }//fim do método
+
+        //4.Calcule o perímetro de um quadrado com base no lado
+        public double PerimetroQuadrado(double lado)
+        {
+            if(lado <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return lado * 4;
+            }
+        }//fim do método
+
+        //5. Converta o valor em horas para minutos
+        public double ConverterHoraEmMinuto(double hora)
+        {
+            if(hora <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return hora * 60;
+            }
+        }//fim do método
+
+        //6.Leia um numero e exiba 10% dele
+        public double DezPorCento(double num1)
+        {
+            if(num1 <= -1)
+            {
+                return -1;
+            }
+            else
+            {
+                return num1 * 0.10;
+            }
+        }//fim do método
+         //7.Leia um numero e exiba 25% dele
+        public double VinteCincoPorCento(double num1)
+        {
+            if (num1 <= -1)
+            {
+                return -1;
+            }
+            else
+            {
+                return num1 * 0.25;
+            }
+        }//fim do método
         //8. Calcule a área de um losangulo com base nas diagonais 
         //area = (diagonalMaior * diagonalMenor) / 2
 
@@ -73,6 +136,74 @@ namespace Exercicios
                 return -1;
             }
         }//fim do metodo
+
+        //10. Leia um numero e exiba seu valor absoluto
+        public int Absoluto(int absoluto)
+        {
+            if(absoluto <= 0)
+            {
+                return absoluto * -1;
+            }
+            else
+            {
+                return absoluto;
+            }
+        }//fim do método
+
+        //11. Converta um valor em quilômetros em metros
+        public int Quilometro(int km)
+        {
+            if(km <= 0) 
+            {
+                return -1;
+            }
+            else
+            {
+                return km * 1000;
+            }
+        }
+
+        //12. Leia um numero e exiba sua quinta potencia
+        public double Potencia(double pot)
+        {
+            if(pot <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return Math.Pow(pot, 5);
+            }
+        }
+
+        //13.Calcule o tempo de uma viagem com base na distancia e velocidade
+        public double TempoDistanciaVelocidade(double dist, double vel)
+        {
+            if(dist <= 0 && vel <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return dist / vel;
+            }
+        }//fim do metodo
+
+        //14. Calcule o consumo médio de combustivel com base em km e litros
+        public double ConsumoMedio(double q, double l)
+        {
+            if(q <= 0 && l <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return q / l;
+            }
+        }//fim do método
+
+        //15. Leia um numero e calcule seu fatorial
+        //fim do método
 
         //16. Leia a altura e peso de uma pessoa e calcule o IMC
         //Se IMC < 18.5 - Abaixo do Peso
@@ -123,8 +254,31 @@ namespace Exercicios
             return resultado;
         }//fim do IMC
 
+        //17. Calcule o salário anual com base no valor mensal
+        public double Salario(double sal)
+        {
+            if (sal <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return sal * 12;
+            }
+        }//fim do método
 
-
+        //18. Leia um número e exiba seu logaritmo natural
+        public double Logaritmo(double log)
+        {
+            if(log <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return Math.Log10(log);
+            }
+        }//fim do método
 
     }//fim da classe 
 }//fim do projeto
