@@ -11,6 +11,9 @@ namespace Exercicios
         //area de variaveis
         private double area;
         private double IMC;
+        private double trapezio;
+        private double retangulo;
+
         //metodo Construtor
         public ExerciciosModel() 
         {
@@ -30,6 +33,18 @@ namespace Exercicios
             get { return this.IMC; }
             set { this.IMC = value; }
         }//fim do metodo
+
+        public double ModificarTrapezio
+        {
+            get { return this.trapezio; }
+            set { this.trapezio = value; }
+        }//fim do método
+
+        public double ModificarRetangulo
+        {
+            get { return this.trapezio; }
+            set { this.trapezio = value; }
+        }//fim do método
 
         //1. Leia um número e exiba seu triplo
         public int Triplo(int num)
@@ -279,6 +294,117 @@ namespace Exercicios
                 return Math.Log10(log);
             }
         }//fim do método
+
+        //19.leia um número e exiba seu seno
+        public double Seno(double cateto, double hip)
+        {
+            if(cateto <= 0 || hip <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return cateto / hip;
+            }
+        }//fim do método
+
+        //20.Leia um número e exiba seu cosseno.
+        public double Cosseno(double catAd,double hp)
+        {
+            if(catAd <= 0 || hp <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return catAd / hp;
+            }
+        }//fim do método
+
+        //21.Calcule a área de um trápezio com base na base maior, base menor e altura
+        public double Trapezio(double maior,double menor, double alt)
+        {
+            if(maior <= 0 || menor <=0 || alt <=0)
+            {
+                return -1;
+            }
+            else
+            {
+                return ModificarTrapezio = ((maior + menor) * alt) / 2;
+            }
+        }//fim do método
+
+        //22. Converta um valor de dias para segundos
+        public double Segundo(int dia)
+        {
+            if(dia <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return dia * 86400;
+            }
+        }//fim do método
+
+        //23. Leia um numero exiba a soma de seus digitos
+        public double Digito(int num)
+        {
+            int somar = 0;
+            //validando
+            if(num < 0)
+            {
+                num *= -1;
+            }
+
+            string nume = "" + num;
+            for(int i = 0; i < nume.Length; i++)
+            {
+                somar += Convert.ToInt32(nume.Substring(i,1));
+            }
+            return somar;
+        }//fim do método
+
+        //24. Leia um número e exiba seu inverso multiplicativo
+        public double Multiplicativo(double numer)
+        {
+            if(numer <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return 1 / numer;
+            }
+        }//fim do método
+
+        //25. Calcule a hipotenusa de um tiângulo retângulo com base nos catetos
+        public double Retangulo(double catA, double catB)
+        {
+            if(catA <= 0 || catB <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                ModificarRetangulo = Math.Pow(catA, 2) + Math.Pow(catB, 2);
+            }
+            return Math.Sqrt(ModificarRetangulo);
+        }//fim do método
+
+        //26.Leia um valor e exiba seu correspondente em binário
+        public double Binario(double bin, double dec)
+        {
+            string bina = "" = bin;
+            for (dec = 0 ; dec < bina.Length; dec++)
+            { 
+                bin += dec % 2;
+                dec = dec / 2;
+            }
+            return 
+        }//fim do método
+
+        //27. Leia um numero e exiba seu correspondente em hexadecimal 
 
     }//fim da classe 
 }//fim do projeto

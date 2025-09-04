@@ -43,7 +43,19 @@ namespace Exercicios
                               "\n15. Exercício 15" +
                               "\n16. Exercício 16" +
                               "\n17. Exercício 17" +
-                              "\n18. Exercício 18" );
+                              "\n18. Exercício 18" +
+                              "\n19. Exercício 19" +
+                              "\n20. Exercício 20" +
+                              "\n21. Exercício 21" +
+                              "\n22. Exercício 22" +
+                              "\n23. Exercício 23" +
+                              "\n24. Exercício 24" +
+                              "\n25. Exercício 25" +
+                              "\n26. Exercício 26" +
+                              "\n27. Exercício 27" +
+                              "\n28. Exercício 28" +
+                              "\n29. Exercício 29" +
+                              "\n30. Exercício 30" );
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do MostrarMenu
 
@@ -308,6 +320,119 @@ namespace Exercicios
                         {
                             Console.WriteLine($"O logaritmo é {resultado}");
                         }
+                        break;
+                    case 19:
+                        Console.WriteLine("Exercício 19");
+                        Console.WriteLine("Informe o Cateto Oposto");
+                        double cateto = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a hipotenusa");
+                        double hip = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Seno(cateto, hip);
+
+                        //operação
+                        if(cateto == -1 || hip == -1)
+                        {
+                            Console.WriteLine("O numero inserido não é válido, insira corretamente");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O Seno é: {resultado}");
+                        }
+                        break;
+                    case 20:
+                        Console.WriteLine("Exercício 20");
+                        Console.WriteLine("Informe o Cateto Adjacente");
+                        double catAd = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a Hipotenusa");
+                        double hp = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Cosseno(catAd, hp);
+                        //operação
+                        if(catAd == -1 || hp == -1)
+                        {
+                            Console.WriteLine("Insira um número válido");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O valor do cosseno é {resultado}");
+                        }
+                        break;
+                    case 21:
+                        Console.WriteLine("Exercício 21");
+                        Console.WriteLine("Informe a base maior");
+                        double maior = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a base menor");
+                        double menor = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a altura");
+                        double alt = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Trapezio(maior, menor, alt);
+                        //operação
+                        if(maior == -1 || menor == -1 || alt == -1)
+                        {
+                            Console.WriteLine("Base maior, menor ou altura são inválidos, insira novamente!");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"A área do Trápezio é {resultado}");
+                        }
+                        break;
+                    case 22:
+                        Console.WriteLine("Exercício 22");
+                        Console.WriteLine("Informe o valor de dias");
+                        int dia = Convert.ToInt32(Console.ReadLine());
+                        resultado =modelo.Segundo(dia);
+                        //operação
+                        if(dia == -1)
+                        {
+                            Console.WriteLine("O dia é inválido, insira novamente");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O valor em segundos é {resultado}");
+                        }
+                        break;
+                    case 23:
+                        Console.WriteLine("Exercício 23");
+                        Console.WriteLine("Insira o numero");
+                        num = Convert.ToInt32(Console.ReadLine());
+                        resultado = modelo.Digito(num);
+                        //operação
+                        Console.WriteLine($"a soma dos digitos é {resultado}");
+                        break;
+                    case 24:
+                        Console.WriteLine("Exercício 24");
+                        Console.WriteLine("Insira um numero");
+                        double numer = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Multiplicativo(numer);
+                        //operação
+                        if (numer == -1)
+                        {
+                            Console.WriteLine("O numero inserido é inválido");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O inverso multiplicativo é {resultado}");
+                        }
+                        break;
+                    case 25:
+                        Console.WriteLine("Exercício 25");
+                        Console.WriteLine("Informe o cateto A");
+                        double catA = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe o cateto B");
+                        double catB = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Retangulo(catA, catB);
+                        //operação
+                        if(catA == -1 || catB == -1)
+                        {
+                            Console.WriteLine("Valores inválidos, insira novamente");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"A hipotenusa do triângulo retângulo é {resultado}");
+                        }
+                        break;
+                    case 26:
+                        Console.WriteLine("Exercício 26");
+                        Console.WriteLine("Insira um valor");
                         break;
                     default:
                         Console.WriteLine("A opção escolhida não é válida!");
