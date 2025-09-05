@@ -15,7 +15,7 @@ namespace Exercicios
         private double retangulo;
 
         //metodo Construtor
-        public ExerciciosModel() 
+        public ExerciciosModel()
         {
             this.area = 0;
         }//fim do construtor
@@ -61,7 +61,7 @@ namespace Exercicios
         //3.Converta um valor de dólares para reais com uma taxa fixa
         public double ConverterDolarReal(double valorDolar, double cotacao)
         {
-            if(valorDolar <= 0 || cotacao <= 0)
+            if (valorDolar <= 0 || cotacao <= 0)
             {
                 return -1;
             }
@@ -74,7 +74,7 @@ namespace Exercicios
         //4.Calcule o perímetro de um quadrado com base no lado
         public double PerimetroQuadrado(double lado)
         {
-            if(lado <= 0)
+            if (lado <= 0)
             {
                 return -1;
             }
@@ -87,7 +87,7 @@ namespace Exercicios
         //5. Converta o valor em horas para minutos
         public double ConverterHoraEmMinuto(double hora)
         {
-            if(hora <= 0)
+            if (hora <= 0)
             {
                 return -1;
             }
@@ -100,7 +100,7 @@ namespace Exercicios
         //6.Leia um numero e exiba 10% dele
         public double DezPorCento(double num1)
         {
-            if(num1 <= -1)
+            if (num1 <= -1)
             {
                 return -1;
             }
@@ -142,7 +142,7 @@ namespace Exercicios
         //volume = Math.pi * Math.pow(raio,2) * altura
         public double VolumeCilindro(double raio, double altura)
         {
-            if(raio > 0 && altura > 0)
+            if (raio > 0 && altura > 0)
             {
                 return Math.PI * Math.Pow(raio, 2) * altura;
             }
@@ -155,7 +155,7 @@ namespace Exercicios
         //10. Leia um numero e exiba seu valor absoluto
         public int Absoluto(int absoluto)
         {
-            if(absoluto <= 0)
+            if (absoluto <= 0)
             {
                 return absoluto * -1;
             }
@@ -168,7 +168,7 @@ namespace Exercicios
         //11. Converta um valor em quilômetros em metros
         public int Quilometro(int km)
         {
-            if(km <= 0) 
+            if (km <= 0)
             {
                 return -1;
             }
@@ -181,7 +181,7 @@ namespace Exercicios
         //12. Leia um numero e exiba sua quinta potencia
         public double Potencia(double pot)
         {
-            if(pot <= 0)
+            if (pot <= 0)
             {
                 return -1;
             }
@@ -194,7 +194,7 @@ namespace Exercicios
         //13.Calcule o tempo de uma viagem com base na distancia e velocidade
         public double TempoDistanciaVelocidade(double dist, double vel)
         {
-            if(dist <= 0 && vel <= 0)
+            if (dist <= 0 && vel <= 0)
             {
                 return -1;
             }
@@ -207,7 +207,7 @@ namespace Exercicios
         //14. Calcule o consumo médio de combustivel com base em km e litros
         public double ConsumoMedio(double q, double l)
         {
-            if(q <= 0 && l <= 0)
+            if (q <= 0 && l <= 0)
             {
                 return -1;
             }
@@ -241,11 +241,11 @@ namespace Exercicios
                 {
                     resultado += " - Abaixo do peso";
                 }
-                else if(ModificarIMC < 24.9)
+                else if (ModificarIMC < 24.9)
                 {
                     resultado += " - Peso Normal";
                 }
-                else if(ModificarIMC < 29.9)
+                else if (ModificarIMC < 29.9)
                 {
                     resultado += " - SOBREPESO";
                 }
@@ -285,7 +285,7 @@ namespace Exercicios
         //18. Leia um número e exiba seu logaritmo natural
         public double Logaritmo(double log)
         {
-            if(log <= 0)
+            if (log <= 0)
             {
                 return -1;
             }
@@ -298,7 +298,7 @@ namespace Exercicios
         //19.leia um número e exiba seu seno
         public double Seno(double cateto, double hip)
         {
-            if(cateto <= 0 || hip <= 0)
+            if (cateto <= 0 || hip <= 0)
             {
                 return -1;
             }
@@ -309,9 +309,9 @@ namespace Exercicios
         }//fim do método
 
         //20.Leia um número e exiba seu cosseno.
-        public double Cosseno(double catAd,double hp)
+        public double Cosseno(double catAd, double hp)
         {
-            if(catAd <= 0 || hp <= 0)
+            if (catAd <= 0 || hp <= 0)
             {
                 return -1;
             }
@@ -322,9 +322,9 @@ namespace Exercicios
         }//fim do método
 
         //21.Calcule a área de um trápezio com base na base maior, base menor e altura
-        public double Trapezio(double maior,double menor, double alt)
+        public double Trapezio(double maior, double menor, double alt)
         {
-            if(maior <= 0 || menor <=0 || alt <=0)
+            if (maior <= 0 || menor <= 0 || alt <= 0)
             {
                 return -1;
             }
@@ -337,7 +337,7 @@ namespace Exercicios
         //22. Converta um valor de dias para segundos
         public double Segundo(int dia)
         {
-            if(dia <= 0)
+            if (dia <= 0)
             {
                 return -1;
             }
@@ -352,15 +352,15 @@ namespace Exercicios
         {
             int somar = 0;
             //validando
-            if(num < 0)
+            if (num < 0)
             {
                 num *= -1;
             }
 
             string nume = "" + num;
-            for(int i = 0; i < nume.Length; i++)
+            for (int i = 0; i < nume.Length; i++)
             {
-                somar += Convert.ToInt32(nume.Substring(i,1));
+                somar += Convert.ToInt32(nume.Substring(i, 1));
             }
             return somar;
         }//fim do método
@@ -368,7 +368,7 @@ namespace Exercicios
         //24. Leia um número e exiba seu inverso multiplicativo
         public double Multiplicativo(double numer)
         {
-            if(numer <= 0)
+            if (numer <= 0)
             {
                 return -1;
             }
@@ -381,7 +381,7 @@ namespace Exercicios
         //25. Calcule a hipotenusa de um tiângulo retângulo com base nos catetos
         public double Retangulo(double catA, double catB)
         {
-            if(catA <= 0 || catB <= 0)
+            if (catA <= 0 || catB <= 0)
             {
                 return -1;
             }
@@ -393,18 +393,117 @@ namespace Exercicios
         }//fim do método
 
         //26.Leia um valor e exiba seu correspondente em binário
-        public double Binario(double bin, double dec)
+        public string Binario(int decim)
         {
-            string bina = "" = bin;
-            for (dec = 0 ; dec < bina.Length; dec++)
-            { 
-                bin += dec % 2;
-                dec = dec / 2;
+            string bin = "";
+            while (decim != 0)
+            {
+                bin = "" + decim % 2;
+                decim /= 2;
             }
-            return 
+            return bin;
+        }//fim do método
+        public string Inverter(string valor)
+        {
+            int tamanho = valor.Length;
+            string binarioInvertido = "";
+            for (int i = tamanho - 1; i >= 0; i--)
+            {
+                binarioInvertido += valor.Substring(i, 1);
+            }
+            return binarioInvertido;
+        }
+
+
+        //27.Leia um numero e exiba seu correspondente em hexadecimal
+        public string Hexadecimal(int decim)
+        {
+            string hexa = "";
+            string result = "";
+            while (decim != 0)
+            {
+                result = "" + decim % 16;
+                switch (result)
+                {
+                    case "10":
+                        result = "A";
+                        break;
+                    case "11":
+                        result = "B";
+                        break;
+                    case "12":
+                        result = "C";
+                        break;
+                    case "13":
+                        result = "D";
+                        break;
+                    case "14":
+                        result = "E";
+                        break;
+                    case "15":
+                        result = "F";
+                        break;
+                }//fim do switch
+                decim /= 16;
+                hexa += result;
+            }//fim do while
+            return Inverter(hexa);
         }//fim do método
 
-        //27. Leia um numero e exiba seu correspondente em hexadecimal 
+        //28.Leia um valor e exiba sua raiz cubica
+
+        //29.Calcule o montande de uma aplicação com juros simples
+        public double Juros(double capital, double taxa, double tempo)
+        {
+            if (capital <= 0 || taxa <= 0 || tempo <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return capital * (1 + taxa * tempo);
+            }
+        }//fim do método
+
+        //30.Calcule o montande de uma aplicação com juros simples
+        public double Composto(double cap, double tax, double temp)
+        {
+            if (cap <= 0 || tax <= 0 || temp <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return cap * Math.Pow(1 + tax, temp);
+            }
+        }//fim do método
+
+        //31.Leia um ângulo em graus e converta para radianos.
+        public double Radiano(double grau)
+        {
+            if (grau <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return (grau * Math.PI / 180) / grau;
+            }
+        }//fim do método
+
+        //32.Leia um valor e exiba seu valor em porcentagem
+        public double Porcentagem(double porcent)
+        {
+            if(porcent <= 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return porcent * 100;
+            }
+        }//fim do metodo
+        
 
     }//fim da classe 
 }//fim do projeto

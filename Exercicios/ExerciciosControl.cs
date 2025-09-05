@@ -433,6 +433,84 @@ namespace Exercicios
                     case 26:
                         Console.WriteLine("Exercício 26");
                         Console.WriteLine("Insira um valor");
+                        int decim = Convert.ToInt32(Console.ReadLine());
+                        //operação
+                        Console.WriteLine($"Valor em Binário {modelo.Inverter(modelo.Binario(decim))}");
+                        break;
+                    case 27:
+                        Console.WriteLine("Exercício 27");
+                        Console.WriteLine("informe um numero");
+                        decim = Convert.ToInt32(Console.ReadLine());
+                        //OPERAÇÃO
+                        Console.WriteLine($"Valor em Hexadecimal: {modelo.Hexadecimal(decim)}");
+                        break;
+                    case 29:
+                        Console.WriteLine("Exercício 29");
+                        Console.WriteLine("Informe o capital inicial");
+                        double capital = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a taxa em decimal");
+                        double taxa = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe o tempo");
+                        double tempo = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Juros(capital, taxa, tempo);
+                        //operação
+                        if(capital == -1 || taxa == -1 || tempo == -1)
+                        {
+                            Console.WriteLine("Valores inseridos incorretamente, insira novamente!");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O montande da aplicação com juros simples é R${resultado}");
+                        }
+                        break;
+                    case 30:
+                        Console.WriteLine("Exercício 30");
+                        Console.WriteLine("Informe o capital inicial");
+                        double cap = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe a taxa em decimal");
+                        double tax = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe o tempo");
+                        double temp = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Juros(cap, tax, temp);
+                        //operação
+                        if (cap == -1 || tax == -1 || temp == -1)
+                        {
+                            Console.WriteLine("Valores inseridos incorretamente, insira novamente!");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O montande da aplicação com juros compostos é R${resultado}");
+                        }
+                        break;
+                    case 31:
+                        Console.WriteLine("Exercício 31");
+                        Console.WriteLine("Informe o ângulo em graus");
+                        double grau = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Radiano(grau);
+                        //operação
+                        if (grau == -1)
+                        {
+                            Console.WriteLine("Valor inserido incorretamente, insira novamente!");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O radiano do ângulo é {resultado}");
+                        }
+                        break;
+                    case 32:
+                        Console.WriteLine("Exercício 32");
+                        Console.WriteLine("Informe o numero");
+                        double porcent = Convert.ToDouble(Console.ReadLine());
+                        resultado = modelo.Porcentagem(porcent);
+                        //operação
+                        if(porcent == -1)
+                        {
+                            Console.WriteLine("Valor inserido é incorreto, digite novamente");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"O valor convertido em porcentagem é: {resultado}");
+                        }
                         break;
                     default:
                         Console.WriteLine("A opção escolhida não é válida!");
