@@ -55,7 +55,15 @@ namespace Exercicios
                               "\n27. Exercício 27" +
                               "\n28. Exercício 28" +
                               "\n29. Exercício 29" +
-                              "\n30. Exercício 30" );
+                              "\n30. Exercício 30" +
+                              "\n31. Exercício 31" +
+                              "\n32. Exercício 32" +
+                              // ***** VETORES *****
+                              "\n33. Exercício 33" +
+                              "\n34. Exercício 34" +
+                              "\n35. Exercício 35" +
+                              "\n36. Exercício 36" +
+                              "\n37. Exercício 37");
             ModificarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do MostrarMenu
 
@@ -511,6 +519,48 @@ namespace Exercicios
                         {
                             Console.WriteLine($"O valor convertido em porcentagem é: {resultado}");
                         }
+                        break;
+                    case 33:
+                        //preencher Vetor
+                        Console.WriteLine("Exercício 32");
+                        //mostrar 
+                        modelo.PreencherVetor();
+                        break;
+                    case 34:
+                        //Mostrar vetor
+                        Console.WriteLine("Exercício 34:");
+                        //mostrar
+                        modelo.ConsultarVetor();
+                        break;
+                    case 35:
+                        //Buscar elemento no vetor
+                        Console.WriteLine("Exercício 35");
+                        //mostrar
+                        Console.WriteLine("Informe a idade que deseja procurar");
+                        int idade = Convert.ToInt32(Console.ReadLine());
+                        //Buscar no método
+                        modelo.BuscarIdade(idade);
+                        break;
+                    case 36:
+                        //2.Leia 10 números e exiba na ordem inversa
+                        Console.WriteLine("Exercício 36");
+                        //mostrar
+                        modelo.Inverso();
+                        modelo.ConsultarInverso();
+                        break;
+                    case 37:
+                        //3.Leia 10 números e exiba apenas os pares.
+                        Console.WriteLine("Exercício 37");
+                        //exibir
+                        modelo.Par();
+                        modelo.ConsultarPar();
+                        break;
+                    case 38:
+                        //3.Leia 10 números e exiba a média
+                        Console.WriteLine("Exercício 38");
+                        //mostrar
+                        modelo.Media();
+                        modelo.ConsultarMedia();
                         break;
                     default:
                         Console.WriteLine("A opção escolhida não é válida!");

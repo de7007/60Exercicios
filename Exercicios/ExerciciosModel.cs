@@ -13,11 +13,17 @@ namespace Exercicios
         private double IMC;
         private double trapezio;
         private double retangulo;
+        public int[] idade;//Estrutura de dados FINITA
+        public int[] num;
+        public int[] soma;
 
         //metodo Construtor
         public ExerciciosModel()
         {
             this.area = 0;
+            this.IMC = 0;
+            this.idade = new int[10];//insere o Tamanho do vetor (0 a 9)
+            this.num = new int[10];
         }//fim do construtor
 
         //Método GET e SET
@@ -504,6 +510,128 @@ namespace Exercicios
             }
         }//fim do metodo
         
+        // ********* VETORES *********** //
+        
 
-    }//fim da classe 
-}//fim do projeto
+        //preenchendo o vetor
+        public void PreencherVetor()
+        {
+            for(int i=0;i <10; i++)
+            {
+                do
+                {
+                    Console.Write(i + 1 + "ª Idade: ");
+                    idade[i] = Convert.ToInt32(Console.ReadLine());
+                    if (idade[i] <= 0)
+                    {
+                        Console.WriteLine("Erro, informe uma idade positiva!");
+                    }//fim da validação
+                } while (idade[i] <= 0);
+            }//fim do for
+        }//fim do método
+        //Método consultar
+        public void ConsultarVetor()
+        {
+            for(int i = 0; i <10; i++)
+            {
+                Console.WriteLine($"{i + 1} ª Idade: {idade[i]}");
+            }//fim do for
+        }//fim do consultar
+
+        public void BuscarIdade(int idade)
+        {
+            Boolean flag = false;
+            for (int i=0; i < 10; i++)
+            {
+                if (this.idade[i] == idade)
+                {
+                    flag = true;
+                    Console.WriteLine($"A idade {idade} está na posição: {i+1}");
+                }
+            }//fim do for
+            if(flag = false)
+            {
+                Console.WriteLine($"A idade{idade}, não está no vetor");
+            }//fim da mensagem alternativa
+        }//fim do método Buscar
+
+        //2. Leia 10 números e exiba-os na ordem inversa
+        public void Inverso()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    Console.Write(i + 1 + "º Número: ");
+                    num[i] = Convert.ToInt32((Console.ReadLine()));
+                    if (num[i] <= 0)
+                    {
+                        Console.Write("O numero inserido é inválido ");
+                    }//fim da validação
+                } while (num[i] <= 0);
+            }//fim do for
+        }//fim do método
+        //Consultar
+        public void ConsultarInverso()
+        {
+            for (int i = 9; i >= 0; i--)
+            {
+                Console.WriteLine($"{i + 1}º Número: {num[i]}");
+            }//fim do for
+        }//fim do método
+
+        //3.Leia 10 números e exiba apenas os pares
+        public void Par()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    Console.Write(i + 1 + "º Número: ");
+                    num[i] = Convert.ToInt32((Console.ReadLine()));
+                    if (num[i] <= 0)
+                    {
+                        Console.Write("O numero inserido é inválido ");
+                    }//fim da validação
+                } while (num[i] <= 0);
+            }//fim do for
+        }//fim do método
+
+        public void ConsultarPar()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                if (num[i] % 2 == 0)
+                {
+                    Console.WriteLine($"Os números pares são{num[i]}");
+                }                    
+            }//fim do for
+        }//fim do método
+
+        //4.Leia 10 numeros e exiba a média
+        public void Media()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                do
+                {
+                    Console.Write(i + 1 + "º Número: ");
+                    num[i] = Convert.ToInt32((Console.ReadLine()));
+                    if (num[i] <= 0)
+                    {
+                        Console.Write("O numero inserido é inválido ");
+                    }//fim da validação
+                } while (num[i] <= 0);
+                soma[i] += num[i];
+            }//fim do for
+        }//fim do método
+
+        public void ConsultarMedia()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"A média dos números é: {soma[i] / 10}");
+            }//fim do for
+        }//fim do método
+    }//fim da classe
+}//fim do projeto 
